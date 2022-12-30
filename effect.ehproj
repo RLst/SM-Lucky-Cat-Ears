@@ -1,6 +1,6 @@
 {
   "name": "Head Tracker",
-  "lastModified": "Fri, 30 Dec 2022 05:51:02 GMT",
+  "lastModified": "Fri, 30 Dec 2022 07:11:17 GMT",
   "version": "1.9.1",
   "toolName": "Effect House",
   "projectID": "ba240108-7c2e-41da-f2d3-f0bba5b43b3a",
@@ -75,9 +75,9 @@
     "62": "Layer 62",
     "63": "Layer 63"
   },
-  "durationToCreate": 4347359776,
-  "durationCreation": 23879385,
-  "durationBackground": 21105527,
+  "durationToCreate": 4352174539,
+  "durationCreation": 26583012,
+  "durationBackground": 21286599,
   "effectHint": "",
   "templateID": "templateID_HeadTracker",
   "overwriteBuiltinMakeup": true,

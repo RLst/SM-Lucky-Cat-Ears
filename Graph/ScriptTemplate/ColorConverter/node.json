@@ -1,0 +1,40 @@
+{
+	"name": "Color Space Converter",
+	"id": "8e1e71a6-5d28-4522-5dc2-c19da6afca94",
+	"inputs": [
+		{
+			"name": "Conversion Type",
+			"description": "The two conversion color spaces, supporting “RGBA to HSLA”, “RGBA to HSVA”, “HSVA to RGBA”, and “HSLA to RGBA”",
+			"type": "String",
+			"displayType": "String",
+			"value_list": [
+				"RGBA to HSLA",
+				"RGBA to HSVA",
+				"HSVA to RGBA",
+				"HSLA to RGBA"
+			]
+		},
+		{
+			"name": "Input Color",
+			"description": "The color to be converted",
+			"type": "Vector4f",
+			"displayType": "Vec4"
+		}
+	],
+	"outputs": [
+		{
+			"name": "Output Color",
+			"description": "The output color in the new color space",
+			"type": "Vector4f",
+			"displayType": "Vec4"
+		}
+	],
+	"js": "CGColorConverter.js",
+	"category": "Utility",
+	"version": "1.0.0",
+	"description": "Convert a color from one color space to another. It supports RGBA to HSLA, RGBA to HSVA, HSVA to RGBA, and HSLA to RGBA.",
+	"productTypes": [
+		"TTEH"
+	],
+	"onlineWebsite": "https://effecthouse.tiktok.com/learn/visual-scripting/Utility/Color-Space-Converter"
+}

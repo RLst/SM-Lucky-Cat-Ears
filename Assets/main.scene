@@ -35,6 +35,35 @@ entities:
         isRootCamera: false
     layer: 0
   - __class: Entity
+    name: 2D Camera
+    guid: {a: 4900546412455632981, b: 17955870433672738236}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 40}
+      - __class: Camera
+        name: ""
+        guid: {a: 5581013947015778758, b: 15779619804770549181}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 64, values: [2, 0]}
+        renderOrder: 20
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 1}
+        clearType:
+          __class: CameraClearType
+          value: DEPTH
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: 00000000-0000-0000-0000-000000000009}
+        isRootCamera: false
+    layer: 1
+  - __class: Entity
     name: Directional Light
     guid: {a: 3261253174792506660, b: 16680708562180406145}
     scene: {localId: 1}
@@ -79,12 +108,46 @@ entities:
           value: Lux
     layer: 0
   - __class: Entity
-    name: alienHat [REPLACE ME]
-    guid: {a: 5134564021279250332, b: 12799530709128711838}
+    name: Spot Light
+    guid: {a: 5063267861606881576, b: 9056684649493090179}
     scene: {localId: 1}
-    selfvisible: false
+    selfvisible: true
     components:
-      - {localId: 4}
+      - {localId: 39}
+      - __class: SpotLight
+        name: ""
+        guid: {a: 5763118070975642481, b: 12322670225455072180}
+        enabled: true
+        color: {x: 1, y: 1, z: 1}
+        intensiy: 6.800000190734863
+        shadowEnable: false
+        shadowEnableNew: false
+        shadowResolution: {x: 256, y: 256}
+        shadowBias: 0
+        shadowStrength: 1
+        useSoftShadow: false
+        shadowSoftness: 1
+        blurRadius: 1.299999952316284
+        blurNum: 0
+        selfShadowGradient: 0
+        shadowColor: {x: 0, y: 0, z: 0}
+        InitStrength: 0.300000011920929
+        EsmC: 0.03500000014901161
+        lightingLayers: {__class: DynamicBitset, numBits: 64, values: [1, 0]}
+        renderMode:
+          __class: LightRenderMode
+          value: AUTO
+        shadowArea: 100
+        autoShadowFrustum: true
+        shadowFrustumZNear: 1
+        shadowFrustumZFar: 100
+        range: 10
+        attenuationRange: 20
+        innerAngle: 60
+        outerAngle: 30
+        lightUnit:
+          __class: LightUnit
+          value: Candelas
     layer: 0
   - __class: Entity
     name: Head Tracker
@@ -127,7 +190,7 @@ entities:
     name: Cat Ears
     guid: {a: 5112283342815453845, b: 15025553890001271438}
     scene: {localId: 1}
-    selfvisible: true
+    selfvisible: false
     components:
       - {localId: 28}
     layer: 0
@@ -154,511 +217,6 @@ entities:
         entirePingPong: false
         mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000005}
         castShadow: false
-    layer: 0
-  - __class: Entity
-    name: SkeletonAndRenderRoot
-    guid: {a: 15512829638661250998, b: 12196623177622185149}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 7}
-      - __class: Animator
-        name: ""
-        guid: {a: 4413710877518931574, b: 13746862005935685506}
-        enabled: true
-        animations:
-          - {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--Animaz-1_Take 001.animaz}
-          - {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--Animaz0_idle.animaz}
-          - {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--Animaz1_sneeze.animaz}
-          - {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--Animaz2_chomp.animaz}
-        runningWrapModes:
-          __class: Map
-          Animaz-1_Take 001: 0
-        cullingMode:
-          __class: AnimatorCullingMode
-          value: CULL_UPDATE_PROPERTY
-    layer: 0
-  - __class: Entity
-    name: horn_1
-    guid: {a: 17385013479932656239, b: 1916270304124433564}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 8}
-      - __class: SkinMeshRenderer
-        name: mesh0_renderer
-        guid: {a: 4269630079532404792, b: 13366858772855614347}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 1
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--horn_1.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 9531555972176088419, b: 9271550810086913960}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_horn_1
-              guid: {a: 1173012113654075776, b: 14382711355562078600}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.9405834, 0.2312305, -0.2486671, 0, -0.1567121, 0.9452624, 0.2862171, 0, 0.3012378, -0.2302419, 0.9253348, 0, 0.1987048, 3.129567, -0.5291747, 1]}
-              boundingBox: {min: {x: -5.004331, y: -6.748121, z: -2.188143}, max: {x: 2.187928, y: 3.744985, z: 5.178543}}
-              jointTransform: {localId: 20}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: horn_2
-    guid: {a: 12845621370474189741, b: 7988556126361901751}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 9}
-      - __class: SkinMeshRenderer
-        name: mesh1_renderer
-        guid: {a: 4848559070796068607, b: 6365541434962650810}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 2
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--horn_2.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 8811263830220810683, b: 11684065307559631261}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_horn_2
-              guid: {a: 10899766821578414185, b: 13020498460885236352}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.7295311, 0.6665861, -0.1531252, 0, -0.4816423, 0.6596578, 0.5769508, 0, 0.4855977, -0.347152, 0.8022969, 0, 0.1075862, 2.536642, 0.04338068, 1]}
-              boundingBox: {min: {x: -5.164753, y: -5.06419, z: -1.717245}, max: {x: 2.442822, y: 2.326262, z: 3.864563}}
-              jointTransform: {localId: 21}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: horn_3
-    guid: {a: 17388069047516948538, b: 6993785385847903897}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 10}
-      - __class: SkinMeshRenderer
-        name: mesh2_renderer
-        guid: {a: 524315358751554130, b: 436268456861282177}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 3
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--horn_3.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 18034807587156912684, b: 1344975292614762896}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_horn_3
-              guid: {a: 309842040477286720, b: 844531526624109463}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.413989, 0.8671396, 0.2769152, 0, -0.9016569, 0.3488538, 0.2555696, 0, 0.1250116, -0.3554856, 0.926284, 0, -0.1621304, 3.34, -0.1097194, 1]}
-              boundingBox: {min: {x: -7.082273, y: -5.529043, z: -2.321449}, max: {x: 3.783653, y: 2.309964, z: 5.557391}}
-              jointTransform: {localId: 22}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: horn_4
-    guid: {a: 3695403675665159484, b: 15130800631614351011}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 11}
-      - __class: SkinMeshRenderer
-        name: mesh3_renderer
-        guid: {a: 11335293632683447195, b: 2157824220667334586}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 4
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--horn_4.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 15943635787002296937, b: 16699846010509952441}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_horn_4
-              guid: {a: 6939871532224758040, b: 7548352310689431225}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.3667492, -0.8702089, -0.3289856, 0, 0.9303197, 0.3432676, 0.1291228, 0, 0.0005662262, -0.3534174, 0.9354656, 0, 0.1325947, 3.500994, -0.09195651, 1]}
-              boundingBox: {min: {x: -4.005942, y: -5.755934, z: -2.398724}, max: {x: 7.427652, y: 2.405178, z: 5.741082}}
-              jointTransform: {localId: 23}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: teeth
-    guid: {a: 9891375646576371296, b: 9320063848362060447}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 12}
-      - __class: SkinMeshRenderer
-        name: mesh4_renderer
-        guid: {a: 4919163735288700296, b: 15221114525355099548}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 5
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--teeth.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 13206692437069971922, b: 15202065655669683611}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_mouth
-              guid: {a: 14217860882464601557, b: 5370158354287366065}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.9998333, -0.005948234, -0.0172602, 0, 0.01131083, 0.9439486, 0.3298988, 0, 0.01433042, -0.330039, 0.9438585, 0, -3.910109, -2.306426, 7.358752, 1]}
-              boundingBox: {min: {x: -1.835133, y: -1.618389, z: -1.659791}, max: {x: 9.549096, y: 2.515942, z: 1.248507}}
-              jointTransform: {localId: 19}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: hatBase
-    guid: {a: 17963809371380502708, b: 7111217013452127109}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 13}
-      - __class: SkinMeshRenderer
-        name: mesh5_renderer
-        guid: {a: 6648447938254974892, b: 3204002620010304663}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 6
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--hatBase.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 9963999115247540433, b: 14854818509113492659}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_eyelid_R_up
-              guid: {a: 14720540073460008670, b: 4545999703522169997}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8057909, 0.3094804, -0.5048989, 0, -0.008873508, 0.8587955, 0.5122416, 0, 0.5921336, -0.4082794, 0.6947558, 0, 3.807489, -8.045712, -7.028785, 1]}
-              boundingBox: {min: {x: -8.87028, y: 0, z: -5.195483}, max: {x: 1, y: 16.63002, z: 4.161786}}
-              jointTransform: {localId: 26}
-            - __class: Joint
-              name: joint_eyelid_R_down
-              guid: {a: 2685895792369568570, b: 6068103810539733916}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8057909, 0.3094804, -0.5048989, 0, -0.008873508, 0.8587955, 0.5122416, 0, 0.5921336, -0.4082794, 0.6947558, 0, 3.721076, -10.03624, -7.516224, 1]}
-              boundingBox: {min: {x: -9.631166, y: 0, z: -9.216306}, max: {x: 1, y: 16.59651, z: 5.046649}}
-              jointTransform: {localId: 27}
-            - __class: Joint
-              name: joint_eyelid_L_down
-              guid: {a: 11476266056664292985, b: 12484417806215358621}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8007618, -0.1966266, 0.5657902, 0, 8.137914e-15, 0.9445848, 0.3282675, 0, -0.5989829, -0.2628641, 0.7563874, 0, -3.406718, -10.04394, -6.840136, 1]}
-              boundingBox: {min: {x: 0, y: 0, z: -2.739351}, max: {x: 8.267052, y: 15.02301, z: 3.95939}}
-              jointTransform: {localId: 25}
-            - __class: Joint
-              name: joint_eyelid_L_up
-              guid: {a: 12484664940942641117, b: 1895550141159790483}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8007618, -0.1966266, 0.5657902, 0, -9.803248e-15, 0.9445848, 0.3282675, 0, -0.5989829, -0.2628641, 0.7563874, 0, -3.324311, -9.441944, -6.941196, 1]}
-              boundingBox: {min: {x: -0.04364914, y: 0, z: -2.872657}, max: {x: 8.990754, y: 15.02301, z: 4.021278}}
-              jointTransform: {localId: 24}
-            - __class: Joint
-              name: joint_horn_4
-              guid: {a: 8379983801645638646, b: 16192437638523814794}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.3667492, -0.8702089, -0.3289856, 0, 0.9303197, 0.3432676, 0.1291228, 0, 0.0005662262, -0.3534174, 0.9354656, 0, -8.354333, -14.28246, 6.612031, 1]}
-              boundingBox: {min: {x: 0, y: 0, z: 0}, max: {x: 1, y: 1, z: 1}}
-              jointTransform: {localId: 23}
-            - __class: Joint
-              name: joint_horn_3
-              guid: {a: 9675204502699181772, b: 3319248795707055038}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.413989, 0.8671396, 0.2769152, 0, -0.9016569, 0.3488538, 0.2555696, 0, 0.1250116, -0.3554856, 0.926284, 0, 7.218323, -14.44375, 8.364814, 1]}
-              boundingBox: {min: {x: 0, y: 0, z: 0}, max: {x: 1, y: 1, z: 1}}
-              jointTransform: {localId: 22}
-            - __class: Joint
-              name: joint_horn_2
-              guid: {a: 8521756836921122617, b: 9845428994727246228}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.7295311, 0.6665861, -0.1531252, 0, -0.4816423, 0.6596578, 0.5769508, 0, 0.4855977, -0.347152, 0.8022969, 0, 9.386643, -16.8356, 1.931267, 1]}
-              boundingBox: {min: {x: 0, y: 0, z: 0}, max: {x: 1, y: 1, z: 1}}
-              jointTransform: {localId: 21}
-            - __class: Joint
-              name: joint_horn_1
-              guid: {a: 13713094294658255765, b: 16919085865820338576}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.9405834, 0.2312305, -0.2486671, 0, -0.1567121, 0.9452624, 0.2862171, 0, 0.3012378, -0.2302419, 0.9253348, 0, 2.632762, -16.61582, 2.614746, 1]}
-              boundingBox: {min: {x: 0, y: 0, z: 0}, max: {x: 1, y: 1, z: 1}}
-              jointTransform: {localId: 20}
-            - __class: Joint
-              name: joint_mouth
-              guid: {a: 523146037531973923, b: 7698101260943139006}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.9998333, -0.005948234, -0.0172602, 0, 0.01131083, 0.9439486, 0.3298988, 0, 0.01433042, -0.330039, 0.9438585, 0, -0.1528998, -5.546216, 2.658511, 1]}
-              boundingBox: {min: {x: -9.631166, y: 0, z: -16.3836}, max: {x: 9.482697, y: 13.81273, z: 5.476369}}
-              jointTransform: {localId: 19}
-            - __class: Joint
-              name: joint_eye_R
-              guid: {a: 1748175386895295888, b: 9953317768595463100}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8057909, 0.3094804, -0.5048989, 0, -0.008873508, 0.8587955, 0.5122416, 0, 0.5921336, -0.4082794, 0.6947558, 0, 3.5541, -9.373652, -6.053341, 1]}
-              boundingBox: {min: {x: -8.87028, y: 0, z: -4.272123}, max: {x: 1, y: 13.67815, z: 4.251}}
-              jointTransform: {localId: 18}
-            - __class: Joint
-              name: joint_base
-              guid: {a: 2903579279741282333, b: 12257139165229480638}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.5657902, -0.1966266, -0.8007618, 0, 0.3282675, 0.9445848, 1e-15, 0, 0.7563874, -0.2628641, 0.5989829, 0, 1.600707, -9.717505, 3.36061, 1]}
-              boundingBox: {min: {x: -9.742226, y: 0, z: -17.01381}, max: {x: 9.491553, y: 17.1482, z: 5.476369}}
-              jointTransform: {localId: 16}
-            - __class: Joint
-              name: joint_eye_L
-              guid: {a: 8740230318033283908, b: 4312598684238527411}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8007618, -0.1966266, 0.5657902, 0, 3.491672e-15, 0.9445848, 0.3282675, 0, -0.5989829, -0.2628641, 0.7563874, 0, -3.36061, -9.717505, -5.948508, 1]}
-              boundingBox: {min: {x: 0, y: 0, z: -2.845422}, max: {x: 8.990754, y: 14.90412, z: 4.021278}}
-              jointTransform: {localId: 17}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: eye_R
-    guid: {a: 4848812500158067240, b: 7466074679429497474}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 14}
-      - __class: SkinMeshRenderer
-        name: mesh6_renderer
-        guid: {a: 10253056057442553897, b: 8515754683980572598}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 7
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--eye_R.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 12269883297298874337, b: 5111632379501741985}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_eye_R
-              guid: {a: 310135560077910009, b: 11373312472272662417}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8057909, 0.3094804, -0.5048989, 0, -0.008873508, 0.8587955, 0.5122416, 0, 0.5921336, -0.4082794, 0.6947558, 0, 0.0001881198, -0.0008043498, -0.0001943441, 1]}
-              boundingBox: {min: {x: -5.253, y: -5.236449, z: -5.231292}, max: {x: 5.246225, y: 5.237393, z: 5.243101}}
-              jointTransform: {localId: 18}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: eye_L
-    guid: {a: 3263879424854493792, b: 12031632784451950511}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 15}
-      - __class: SkinMeshRenderer
-        name: mesh7_renderer
-        guid: {a: 17097747387837615819, b: 3476192107596068236}
-        enabled: true
-        sharedMaterials:
-          - {localId: 1, path: 8695aaa2-8983-5fc3-18e6-8dde5f232851--8695aaa2-8983-5fc3-18e6-8dde5f232851-skin.material}
-        sortingOrder: 8
-        autoSortingOrder: true
-        useFrustumCulling: true
-        receiveShadow: true
-        lightProbeBlendMode:
-          __class: LightProbeBlendMode
-          value: OFF
-        entirePingPong: false
-        mesh: {localId: 1, path: 1b35160d-cebf-8e7d-58a8-3f1809928018--eye_L.mesh}
-        gpuTextureSkinning: false
-        useCoarseMesh: false
-        castShadow: false
-        skin:
-          __class: Skin
-          name: ""
-          guid: {a: 17023921614605822900, b: 13648255960926913967}
-          skelRootName: ""
-          joints:
-            - __class: Joint
-              name: joint_eye_L
-              guid: {a: 16664459053878616525, b: 1608903107419151773}
-              invBindPosMatrix: {__class: Matrix4x4f, values: [0.8007618, -0.1966266, 0.5657902, 0, 1e-15, 0.9445848, 0.3282675, 0, -0.5989829, -0.2628641, 0.7563874, 0, -0.1338538, 0.04686438, -0.2290446, 1]}
-              boundingBox: {min: {x: -3.645019, y: -3.654125, z: -3.652965}, max: {x: 3.670355, y: 3.674613, z: 3.67182}}
-              jointTransform: {localId: 17}
-          positionOnly: true
-          useTangent: true
-    layer: 0
-  - __class: Entity
-    name: joint_base
-    guid: {a: 16378843028782365768, b: 511131068666922634}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 16}
-    layer: 0
-  - __class: Entity
-    name: joint_eye_L
-    guid: {a: 15655210048777725047, b: 15295045015102565034}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 17}
-    layer: 0
-  - __class: Entity
-    name: joint_eye_R
-    guid: {a: 5354325436796371567, b: 11496134485083082427}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 18}
-    layer: 0
-  - __class: Entity
-    name: joint_mouth
-    guid: {a: 10900718044187445292, b: 4993989459986808254}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 19}
-    layer: 0
-  - __class: Entity
-    name: joint_horn_1
-    guid: {a: 9604395725994355683, b: 15315774113271048350}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 20}
-    layer: 0
-  - __class: Entity
-    name: joint_horn_2
-    guid: {a: 10251964562664151271, b: 7633541135298067377}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 21}
-    layer: 0
-  - __class: Entity
-    name: joint_horn_3
-    guid: {a: 6215020938873272818, b: 13677296554412393630}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 22}
-    layer: 0
-  - __class: Entity
-    name: joint_horn_4
-    guid: {a: 10540277429690050491, b: 17376473934940647584}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 23}
-    layer: 0
-  - __class: Entity
-    name: joint_eyelid_L_up
-    guid: {a: 11046471144889034094, b: 79040124468117398}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 24}
-    layer: 0
-  - __class: Entity
-    name: joint_eyelid_L_down
-    guid: {a: 3334449288675973783, b: 8639939467708106420}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 25}
-    layer: 0
-  - __class: Entity
-    name: joint_eyelid_R_up
-    guid: {a: 16017841970059906053, b: 962645765969229722}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 26}
-    layer: 0
-  - __class: Entity
-    name: joint_eyelid_R_down
-    guid: {a: 4343847680414957084, b: 4662097718418370726}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 27}
     layer: 0
   - __class: Entity
     name: SkeletonAndRenderRoot
@@ -709,7 +267,7 @@ entities:
         enabled: true
         sharedMaterials:
           - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
-        sortingOrder: 9
+        sortingOrder: 1
         autoSortingOrder: true
         useFrustumCulling: true
         receiveShadow: true
@@ -741,7 +299,7 @@ entities:
         enabled: true
         sharedMaterials:
           - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
-        sortingOrder: 10
+        sortingOrder: 2
         autoSortingOrder: true
         useFrustumCulling: true
         receiveShadow: true
@@ -773,7 +331,7 @@ entities:
         enabled: true
         sharedMaterials:
           - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
-        sortingOrder: 11
+        sortingOrder: 3
         autoSortingOrder: true
         useFrustumCulling: true
         receiveShadow: true
@@ -865,77 +423,6 @@ entities:
           value: Candelas
     layer: 0
   - __class: Entity
-    name: Spot Light
-    guid: {a: 5063267861606881576, b: 9056684649493090179}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 39}
-      - __class: SpotLight
-        name: ""
-        guid: {a: 5763118070975642481, b: 12322670225455072180}
-        enabled: true
-        color: {x: 1, y: 1, z: 1}
-        intensiy: 6.800000190734863
-        shadowEnable: false
-        shadowEnableNew: false
-        shadowResolution: {x: 256, y: 256}
-        shadowBias: 0
-        shadowStrength: 1
-        useSoftShadow: false
-        shadowSoftness: 1
-        blurRadius: 1.299999952316284
-        blurNum: 0
-        selfShadowGradient: 0
-        shadowColor: {x: 0, y: 0, z: 0}
-        InitStrength: 0.300000011920929
-        EsmC: 0.03500000014901161
-        lightingLayers: {__class: DynamicBitset, numBits: 64, values: [1, 0]}
-        renderMode:
-          __class: LightRenderMode
-          value: AUTO
-        shadowArea: 100
-        autoShadowFrustum: true
-        shadowFrustumZNear: 1
-        shadowFrustumZFar: 100
-        range: 10
-        attenuationRange: 20
-        innerAngle: 60
-        outerAngle: 30
-        lightUnit:
-          __class: LightUnit
-          value: Candelas
-    layer: 0
-  - __class: Entity
-    name: 2D Camera
-    guid: {a: 4900546412455632981, b: 17955870433672738236}
-    scene: {localId: 1}
-    selfvisible: true
-    components:
-      - {localId: 40}
-      - __class: Camera
-        name: ""
-        guid: {a: 5581013947015778758, b: 15779619804770549181}
-        enabled: true
-        layerVisibleMask: {__class: DynamicBitset, numBits: 64, values: [2, 0]}
-        renderOrder: 20
-        type:
-          __class: CameraType
-          value: ORTHO
-        clearColor: {r: 0, g: 0, b: 0, a: 1}
-        clearType:
-          __class: CameraClearType
-          value: DEPTH
-        alwaysClear: true
-        viewport: {x: 0, y: 0, w: 1, h: 1}
-        fovy: 60
-        orthoScale: 1
-        zNear: 0.1000000014901161
-        zFar: 1000
-        renderTexture: {localId: 1, path: 00000000-0000-0000-0000-000000000009}
-        isRootCamera: false
-    layer: 1
-  - __class: Entity
     name: Canvas
     guid: {a: 4968767097418403901, b: 10022531729129204394}
     scene: {localId: 1}
@@ -946,7 +433,7 @@ entities:
         name: ""
         guid: {a: 4961645826068194775, b: 15586316450686013852}
         enabled: true
-        sortingOrder: 12
+        sortingOrder: 4
         autoSortingOrder: true
         useFrustumCulling: true
         receiveShadow: true
@@ -962,7 +449,7 @@ entities:
           value: Normal
         blendAlpha: 1
         blendAlphaCkeck: true
-        drawCallNum: 2
+        drawCallNum: 1
         maskType:
           __class: IFMaskType
           value: None
@@ -980,10 +467,10 @@ entities:
         resolutionSize: {x: 720, y: 1280}
     layer: 1
   - __class: Entity
-    name: Image
+    name: MungXuanQuyMao
     guid: {a: 4781555473474572367, b: 14163061322459143849}
     scene: {localId: 1}
-    selfvisible: true
+    selfvisible: false
     components:
       - {localId: 42}
       - __class: IFSprite2d
@@ -1002,8 +489,7 @@ entities:
         blendMode:
           __class: IFBlendMode
           value: Normal
-        texture: {localId: 1, path: Library/Artifact/138ee0a1-6bc4-9019-cb0f-8746c7f30d61/43.png}
-        imageAtlas: {localId: 1, path: 138ee0a1-6bc4-9019-cb0f-8746c7f30d61--43.imageatlas}
+        texture: {localId: 1, path: 00000000-0000-0000-0000-00000000003e--00000000-0000-0000-0000-00000000003e.png}
         atlasIndex: 0
         filledType:
           __class: IFFilledType
@@ -1034,26 +520,26 @@ entities:
         name: ""
         guid: {a: 5742772319936261847, b: 15835368860434384269}
         enabled: true
-        animSeq: {localId: 1, path: 138ee0a1-6bc4-9019-cb0f-8746c7f30d61--138ee0a1-6bc4-9019-cb0f-8746c7f30d61.seq}
+        animSeq: {localId: 3, path: 138ee0a1-6bc4-9019-cb0f-8746c7f30d61--138ee0a1-6bc4-9019-cb0f-8746c7f30d61.seq}
         texName: Albedo
         frameName: _MainTex_ST
         frameRotateName: _Atlas_Rotated
         frameInnerName: _Atlas_InnerTex_ST
         playmode:
           __class: PlayMode
-          value: loop
+          value: once
         loopCount: -1
-        speed: 12
+        speed: 25
         autoplay: true
         animSeqMap:
           __class: Map
-          MungXuanQuyMao: {localId: 1, path: 138ee0a1-6bc4-9019-cb0f-8746c7f30d61--138ee0a1-6bc4-9019-cb0f-8746c7f30d61.seq}
+          MungXuanQuyMao: {localId: 3, path: 138ee0a1-6bc4-9019-cb0f-8746c7f30d61--138ee0a1-6bc4-9019-cb0f-8746c7f30d61.seq}
     layer: 1
   - __class: Entity
     name: Falling Flower
     guid: {a: 4805241455127081687, b: 6691915345839343008}
     scene: {localId: 1}
-    selfvisible: true
+    selfvisible: false
     components:
       - {localId: 43}
       - __class: IFSprite2d
@@ -1072,8 +558,7 @@ entities:
         blendMode:
           __class: IFBlendMode
           value: Normal
-        texture: {localId: 1, path: Library/Artifact/c88373ca-ee58-fee4-af96-b415d5742766/59.png}
-        imageAtlas: {localId: 1, path: c88373ca-ee58-fee4-af96-b415d5742766--59.imageatlas}
+        texture: {localId: 1, path: 00000000-0000-0000-0000-000000000021--00000000-0000-0000-0000-000000000021.png}
         atlasIndex: 0
         filledType:
           __class: IFFilledType
@@ -1104,7 +589,7 @@ entities:
         name: ""
         guid: {a: 4820734512288970831, b: 11243618117256958881}
         enabled: true
-        animSeq: {localId: 1, path: c88373ca-ee58-fee4-af96-b415d5742766--c88373ca-ee58-fee4-af96-b415d5742766.seq}
+        animSeq: {localId: 3, path: c88373ca-ee58-fee4-af96-b415d5742766--c88373ca-ee58-fee4-af96-b415d5742766.seq}
         texName: Albedo
         frameName: _MainTex_ST
         frameRotateName: _Atlas_Rotated
@@ -1113,11 +598,62 @@ entities:
           __class: PlayMode
           value: loop
         loopCount: -1
-        speed: 12
+        speed: 25
         autoplay: true
         animSeqMap:
           __class: Map
-          Falling flower: {localId: 1, path: c88373ca-ee58-fee4-af96-b415d5742766--c88373ca-ee58-fee4-af96-b415d5742766.seq}
+          Falling flower: {localId: 3, path: c88373ca-ee58-fee4-af96-b415d5742766--c88373ca-ee58-fee4-af96-b415d5742766.seq}
+    layer: 1
+  - __class: Entity
+    name: Instructions
+    guid: {a: 306680170627241035, b: 12902993092721304766}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 44}
+      - __class: IFSprite2d
+        name: ""
+        guid: {a: 8954300729025571451, b: 364933104567021445}
+        enabled: true
+        alpha: 1
+        cascadeAlphaEnabled: false
+        type:
+          __class: IFSprite2dType
+          value: Normal
+        sizeMode:
+          __class: IFSprite2dSizeMode
+          value: Custom
+        colorTint: {r: 0.8112245, g: 0.8112245, b: 0.8112245, a: 1}
+        blendMode:
+          __class: IFBlendMode
+          value: Normal
+        texture: {localId: 1, path: 1906bc2d-fc40-ab94-a2b4-06a0b6b55070--1906bc2d-fc40-ab94-a2b4-06a0b6b55070.png}
+        atlasIndex: 0
+        filledType:
+          __class: IFFilledType
+          value: Horizontal
+        filledStartPos: 0
+        filledRange: 1
+        ellipseX: 336
+        ellipseY: 336
+        topLeftPoint: {x: 0, y: 0}
+        topRightPoint: {x: 0, y: 0}
+        bottomLeftPoint: {x: 0, y: 0}
+        bottomRightPoint: {x: 0, y: 0}
+        slicedLeft: 0.1000000014901161
+        slicedRight: 0.8999999761581421
+        slicedBottom: 0.1000000014901161
+        slicedTop: 0.8999999761581421
+        fillCenter: true
+        topLeft: 0.5
+        topRight: 0.5
+        bottomLeft: 0.5
+        bottomRight: 0.5
+        lineWidth: 1
+        lineColor: {r: 1, g: 1, b: 1, a: 1}
+        outer: false
+        sizeInited: true
+        freeInited: false
     layer: 1
 visible: true
 config:
@@ -1152,19 +688,6 @@ localOrientation: {w: 0.6123723, x: -0.3535534, y: -0.6123725, z: -0.3535534}
 mobility:
   __class: Mobility
   value: Dynamic
---- !Transform &4
-name: ""
-guid: {a: 3983492894569993793, b: 2973857601829270719}
-enabled: true
-localPosition: {x: 0, y: 0, z: 0}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 5}
-children:
-  - {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
 --- !Transform &5
 name: ""
 guid: {a: 6649728830845122681, b: 12730707836961908112}
@@ -1174,7 +697,7 @@ localScale: {x: 1, y: 1, z: 1}
 localOrientation: {w: 1, x: 0, y: 0, z: 0}
 children:
   - {localId: 6}
-  - {localId: 4}
+  - {localId: 28}
 mobility:
   __class: Mobility
   value: Dynamic
@@ -1189,266 +712,14 @@ parent: {localId: 5}
 mobility:
   __class: Mobility
   value: Dynamic
---- !Transform &7
-name: SkeletonAndRenderRoot
-guid: {a: 18176917673367664461, b: 2350405173661672373}
-enabled: true
-localPosition: {x: 0, y: 0, z: 0}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 4}
-children:
-  - {localId: 8}
-  - {localId: 9}
-  - {localId: 10}
-  - {localId: 11}
-  - {localId: 12}
-  - {localId: 13}
-  - {localId: 14}
-  - {localId: 15}
-  - {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &8
-name: horn_1
-guid: {a: 8522356511996141911, b: 16013901731656926092}
-enabled: true
-localPosition: {x: 3.058093, y: 18.14618, z: -8.188624}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &9
-name: horn_2
-guid: {a: 10687009565509476466, b: 18316745807386758317}
-enabled: true
-localPosition: {x: 6.432989, y: 16.15902, z: -12.74565}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &10
-name: horn_3
-guid: {a: 13497010882971818570, b: 10025590373829345195}
-enabled: true
-localPosition: {x: 10.01884, y: 10.69273, z: -15.09433}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &11
-name: horn_4
-guid: {a: 1102153062482433407, b: 3738120646924803257}
-enabled: true
-localPosition: {x: -10.15723, y: 13.1344, z: -12.55153}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &12
-name: teeth
-guid: {a: 10396817101597182157, b: 267878009232341381}
-enabled: true
-localPosition: {x: -3.856982, y: 4.566302, z: 3.313263}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &13
-name: hatBase
-guid: {a: 742891445505075454, b: 11473836184173426099}
-enabled: true
-localPosition: {x: 0, y: 0, z: 0}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &14
-name: eye_R
-guid: {a: 1895499342072975394, b: 8870524662483789214}
-enabled: true
-localPosition: {x: -3.019224, y: 11.18157, z: -1.725673}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &15
-name: eye_L
-guid: {a: 5209849750151320274, b: 10437200874374212791}
-enabled: true
-localPosition: {x: 3.899945, y: 11.10079, z: -0.1733438}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 1, x: 0, y: 0, z: 0}
-parent: {localId: 7}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &16
-name: joint_base
-guid: {a: 1391163231610061955, b: 17568697903225287320}
-enabled: true
-localPosition: {x: -0.1253362, y: 8.653547, z: -5.778086}
-localScale: {x: 1, y: 0.9999999, z: 0.9999999}
-localOrientation: {w: 0.8816686, x: -0.07453597, y: -0.4415347, z: 0.1488354}
-parent: {localId: 7}
-children:
-  - {localId: 17}
-  - {localId: 18}
-  - {localId: 19}
-  - {localId: 20}
-  - {localId: 21}
-  - {localId: 22}
-  - {localId: 23}
-  - {localId: 24}
-  - {localId: 25}
-  - {localId: 26}
-  - {localId: 27}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &17
-name: joint_eye_L
-guid: {a: 9316318658780433663, b: 17456228966046464440}
-enabled: true
-localPosition: {x: 7.549215, y: 1.355119e-15, z: -3.284453e-15}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 0.7071067, x: 0, y: 0.7071068, z: 0}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &18
-name: joint_eye_R
-guid: {a: 9749347806492310305, b: 18094678950028834191}
-enabled: true
-localPosition: {x: 2.257757, y: 1.892542, z: 4.744459}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 0.9459128, x: -0.2359833, y: 0.1846255, z: -0.1243959}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &19
-name: joint_mouth
-guid: {a: 12413531991546361906, b: 8479407458041886853}
-enabled: true
-localPosition: {x: -0.1551015, y: -4.491498, z: 0.6297584}
-localScale: {x: 1, y: 0.9999999, z: 1}
-localOrientation: {w: 0.8858597, x: -0.07332689, y: 0.4528078, z: -0.06957693}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &20
-name: joint_horn_1
-guid: {a: 8881756833984774791, b: 1860000410947759239}
-enabled: true
-localPosition: {x: 2.463303, y: 6.254966, z: -2.469488}
-localScale: {x: 0.9999999, y: 1, z: 1}
-localOrientation: {w: 0.9178646, x: -0.1086993, y: 0.3339057, z: -0.1849758}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &21
-name: joint_horn_2
-guid: {a: 7441259161475484956, b: 17516437900230707353}
-enabled: true
-localPosition: {x: -0.03334211, y: 6.214255, z: -7.53825}
-localScale: {x: 1, y: 0.9999999, z: 1}
-localOrientation: {w: 0.8379172, x: -0.3299572, y: 0.2992302, z: -0.3154113}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &22
-name: joint_horn_3
-guid: {a: 17531344749346984369, b: 1813255959019784327}
-enabled: true
-localPosition: {x: -1.652313, y: 1.374434, z: -10.67801}
-localScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
-localOrientation: {w: 0.6360725, x: -0.3343855, y: 0.4707905, z: -0.5118149}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &23
-name: joint_horn_4
-guid: {a: 11478178797623468039, b: 5648600843991864981}
-enabled: true
-localPosition: {x: -7.079475, y: 5.813725, z: 2.392161}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 0.8551819, x: 0.1591429, y: 0.2505794, z: 0.4249087}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &24
-name: joint_eyelid_L_up
-guid: {a: 1751311848833657206, b: 6087465724901946798}
-enabled: true
-localPosition: {x: 8.541903, y: -0.2755605, z: 0.03629985}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 0.7071067, x: 0, y: 0.7071068, z: 0}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &25
-name: joint_eyelid_L_down
-guid: {a: 162276980121068125, b: 13971418754819736221}
-enabled: true
-localPosition: {x: 8.440843, y: 0.3264342, z: -0.04610736}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 0.7071067, x: 0, y: 0.7071068, z: 0}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &26
-name: joint_eyelid_R_up
-guid: {a: 4704855210383657319, b: 10322730123741546378}
-enabled: true
-localPosition: {x: 2.218804, y: 1.195025, z: 6.269835}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 0.9459128, x: -0.2359833, y: 0.1846255, z: -0.1243959}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
---- !Transform &27
-name: joint_eyelid_R_down
-guid: {a: 7368487608558114922, b: 7023383130273692045}
-enabled: true
-localPosition: {x: 2.802368, y: 3.100564, z: 5.66696}
-localScale: {x: 1, y: 1, z: 1}
-localOrientation: {w: 0.9459128, x: -0.2359833, y: 0.1846255, z: -0.1243959}
-parent: {localId: 16}
-mobility:
-  __class: Mobility
-  value: Dynamic
 --- !Transform &28
 name: ""
 guid: {a: 4881689736351601423, b: 11396411750503926159}
 enabled: true
-localPosition: {x: 0, y: 11.54694, z: 0}
-localScale: {x: 1.382195, y: 1.382195, z: 1.382195}
-localOrientation: {w: 0.9772888, x: 0.2119195, y: 0, z: 0}
+localPosition: {x: 0, y: 9.398698, z: -4.786258}
+localScale: {x: 1.9, y: 1.62, z: 1.62}
+localOrientation: {w: 0.9981349, x: -0.06104855, y: 0, z: 0}
+parent: {localId: 5}
 children:
   - {localId: 29}
 mobility:
@@ -1605,8 +876,9 @@ localPosition: {x: 0, y: 0, z: 0}
 localScale: {x: 1, y: 1, z: 1}
 localOrientation: {w: 1, x: 0, y: 0, z: 0}
 children:
-  - {localId: 42}
+  - {localId: 44}
   - {localId: 43}
+  - {localId: 42}
 mobility:
   __class: Mobility
   value: Dynamic
@@ -1636,7 +908,7 @@ size: {x: 360, y: 640}
 pivot: {x: 0.5, y: 0.5}
 flipX: false
 flipY: false
-depth: -1
+depth: -3
 --- !IFTransform2d &43
 name: ""
 guid: {a: 5023598689830765880, b: 13599985954572407176}
@@ -1656,3 +928,22 @@ pivot: {x: 0.5, y: 0.5}
 flipX: false
 flipY: false
 depth: -2
+--- !IFTransform2d &44
+name: ""
+guid: {a: 16593807989846610038, b: 11925315098714278286}
+enabled: true
+localPosition: {x: 1.238538e-08, y: -0.6287272, z: 0}
+localScale: {x: 0.85, y: 0.85, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 41}
+mobility:
+  __class: Mobility
+  value: Dynamic
+position: {x: 7.926645e-06, y: -402.3854}
+rotation: 0
+scale: {x: 0.85, y: 0.85}
+size: {x: 768, y: 240}
+pivot: {x: 0.5, y: 0.5}
+flipX: false
+flipY: false
+depth: -1
