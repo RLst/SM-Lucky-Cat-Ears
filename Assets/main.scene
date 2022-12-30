@@ -523,7 +523,7 @@ entities:
           value: Normal
         blendAlpha: 1
         blendAlphaCkeck: true
-        drawCallNum: 3
+        drawCallNum: 2
         maskType:
           __class: IFMaskType
           value: None
@@ -544,7 +544,7 @@ entities:
     name: MungXuanQuyMao
     guid: {a: 4781555473474572367, b: 14163061322459143849}
     scene: {localId: 1}
-    selfvisible: true
+    selfvisible: false
     components:
       - {localId: 42}
       - __class: IFSprite2d
@@ -564,7 +564,6 @@ entities:
           __class: IFBlendMode
           value: Normal
         texture: {localId: 1, path: Library/Artifact/55c0d4e9-9330-797d-ef77-39e55bf045c2/50.png}
-        imageAtlas: {localId: 2, path: 55c0d4e9-9330-797d-ef77-39e55bf045c2--50.imageatlas}
         atlasIndex: 0
         filledType:
           __class: IFFilledType
@@ -731,7 +730,7 @@ entities:
         freeInited: false
     layer: 1
   - __class: Entity
-    name: Reset
+    name: Reset Button
     guid: {a: 12343548993524610650, b: 17351415366529128355}
     scene: {localId: 1}
     selfvisible: true
