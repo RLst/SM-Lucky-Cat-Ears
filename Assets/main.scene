@@ -150,7 +150,7 @@ entities:
           value: Candelas
     layer: 0
   - __class: Entity
-    name: Head Tracker
+    name: Head Tracker 1
     guid: {a: 2253815487157168038, b: 13727790801446539406}
     scene: {localId: 1}
     selfvisible: true
@@ -187,7 +187,81 @@ entities:
           value: ROTATE_AROUND_XYZ_AXIS
     layer: 0
   - __class: Entity
-    name: Cat Ears
+    name: Head Tracker 2
+    guid: {a: 18177293575722632039, b: 11457744256366417540}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 47}
+      - __class: FaceCapture
+        name: ""
+        guid: {a: 10830063003511569131, b: 1162212445648157607}
+        enabled: true
+        faceid: 1
+        captureType:
+          __class: CaptureType
+          value: HUMAN
+        captureVersion:
+          __class: CaptureVersion
+          value: SOLVEPNP
+        alignoffset: {x: 0, y: 0}
+        alignz: 5
+        isGlobal: true
+        useSceneCameraFov: false
+        isPictureMode: false
+        isFaceCaptureEnable: true
+        calirateVersion:
+          __class: CalibrationType
+          value: V5
+        nearPlane: 0.1000000014901161
+        farPlane: 10000
+        useSceneCameraNearFar: false
+        behaviorWhenTrackerDisappear:
+          __class: BehaviorWhenTrackerDisappear
+          value: ALIGN_VISIBILITY_WITH_TRACKER
+        entityRotateType:
+          __class: EntityRotateType
+          value: ROTATE_AROUND_XYZ_AXIS
+    layer: 0
+  - __class: Entity
+    name: Head Tracker 3
+    guid: {a: 4632091418242023700, b: 9640101679675188357}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 61}
+      - __class: FaceCapture
+        name: ""
+        guid: {a: 18178214175455879472, b: 625788280538153123}
+        enabled: true
+        faceid: 1
+        captureType:
+          __class: CaptureType
+          value: HUMAN
+        captureVersion:
+          __class: CaptureVersion
+          value: SOLVEPNP
+        alignoffset: {x: 0, y: 0}
+        alignz: 5
+        isGlobal: true
+        useSceneCameraFov: false
+        isPictureMode: false
+        isFaceCaptureEnable: true
+        calirateVersion:
+          __class: CalibrationType
+          value: V5
+        nearPlane: 0.1000000014901161
+        farPlane: 10000
+        useSceneCameraNearFar: false
+        behaviorWhenTrackerDisappear:
+          __class: BehaviorWhenTrackerDisappear
+          value: ALIGN_VISIBILITY_WITH_TRACKER
+        entityRotateType:
+          __class: EntityRotateType
+          value: ROTATE_AROUND_XYZ_AXIS
+    layer: 0
+  - __class: Entity
+    name: Cat Ears 1
     guid: {a: 5112283342815453845, b: 15025553890001271438}
     scene: {localId: 1}
     selfvisible: false
@@ -433,7 +507,7 @@ entities:
         name: ""
         guid: {a: 4961645826068194775, b: 15586316450686013852}
         enabled: true
-        sortingOrder: 4
+        sortingOrder: 12
         autoSortingOrder: true
         useFrustumCulling: true
         receiveShadow: true
@@ -449,7 +523,7 @@ entities:
           value: Normal
         blendAlpha: 1
         blendAlphaCkeck: true
-        drawCallNum: 1
+        drawCallNum: 3
         maskType:
           __class: IFMaskType
           value: None
@@ -470,7 +544,7 @@ entities:
     name: MungXuanQuyMao
     guid: {a: 4781555473474572367, b: 14163061322459143849}
     scene: {localId: 1}
-    selfvisible: false
+    selfvisible: true
     components:
       - {localId: 42}
       - __class: IFSprite2d
@@ -489,7 +563,8 @@ entities:
         blendMode:
           __class: IFBlendMode
           value: Normal
-        texture: {localId: 1, path: 00000000-0000-0000-0000-00000000003e--00000000-0000-0000-0000-00000000003e.png}
+        texture: {localId: 1, path: Library/Artifact/55c0d4e9-9330-797d-ef77-39e55bf045c2/50.png}
+        imageAtlas: {localId: 2, path: 55c0d4e9-9330-797d-ef77-39e55bf045c2--50.imageatlas}
         atlasIndex: 0
         filledType:
           __class: IFFilledType
@@ -520,7 +595,7 @@ entities:
         name: ""
         guid: {a: 5742772319936261847, b: 15835368860434384269}
         enabled: true
-        animSeq: {localId: 3, path: 138ee0a1-6bc4-9019-cb0f-8746c7f30d61--138ee0a1-6bc4-9019-cb0f-8746c7f30d61.seq}
+        animSeq: {localId: 2, path: 55c0d4e9-9330-797d-ef77-39e55bf045c2--55c0d4e9-9330-797d-ef77-39e55bf045c2.seq}
         texName: Albedo
         frameName: _MainTex_ST
         frameRotateName: _Atlas_Rotated
@@ -529,11 +604,11 @@ entities:
           __class: PlayMode
           value: once
         loopCount: -1
-        speed: 25
+        speed: 24
         autoplay: true
         animSeqMap:
           __class: Map
-          MungXuanQuyMao: {localId: 3, path: 138ee0a1-6bc4-9019-cb0f-8746c7f30d61--138ee0a1-6bc4-9019-cb0f-8746c7f30d61.seq}
+          MungXuanQuyMao: {localId: 2, path: 55c0d4e9-9330-797d-ef77-39e55bf045c2--55c0d4e9-9330-797d-ef77-39e55bf045c2.seq}
     layer: 1
   - __class: Entity
     name: Falling Flower
@@ -558,7 +633,7 @@ entities:
         blendMode:
           __class: IFBlendMode
           value: Normal
-        texture: {localId: 1, path: 00000000-0000-0000-0000-000000000021--00000000-0000-0000-0000-000000000021.png}
+        texture: {localId: 1, path: Library/Artifact/c88373ca-ee58-fee4-af96-b415d5742766/55.png}
         atlasIndex: 0
         filledType:
           __class: IFFilledType
@@ -598,7 +673,7 @@ entities:
           __class: PlayMode
           value: loop
         loopCount: -1
-        speed: 25
+        speed: 24
         autoplay: true
         animSeqMap:
           __class: Map
@@ -623,7 +698,7 @@ entities:
         sizeMode:
           __class: IFSprite2dSizeMode
           value: Custom
-        colorTint: {r: 0.8112245, g: 0.8112245, b: 0.8112245, a: 1}
+        colorTint: {r: 1, g: 1, b: 1, a: 1}
         blendMode:
           __class: IFBlendMode
           value: Normal
@@ -655,12 +730,539 @@ entities:
         sizeInited: true
         freeInited: false
     layer: 1
+  - __class: Entity
+    name: Reset
+    guid: {a: 12343548993524610650, b: 17351415366529128355}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 46}
+      - __class: IFSprite2d
+        name: ""
+        guid: {a: 10253287172466498201, b: 4832550273511892154}
+        enabled: true
+        alpha: 0
+        cascadeAlphaEnabled: false
+        type:
+          __class: IFSprite2dType
+          value: Normal
+        sizeMode:
+          __class: IFSprite2dSizeMode
+          value: Custom
+        colorTint: {r: 1, g: 1, b: 1, a: 1}
+        blendMode:
+          __class: IFBlendMode
+          value: Normal
+        texture: {localId: 1, path: 00000000-0000-0000-0000-00000000003e--00000000-0000-0000-0000-00000000003e.png}
+        atlasIndex: 0
+        filledType:
+          __class: IFFilledType
+          value: Horizontal
+        filledStartPos: 0
+        filledRange: 1
+        ellipseX: 336
+        ellipseY: 336
+        topLeftPoint: {x: 0, y: 0}
+        topRightPoint: {x: 0, y: 0}
+        bottomLeftPoint: {x: 0, y: 0}
+        bottomRightPoint: {x: 0, y: 0}
+        slicedLeft: 0.1000000014901161
+        slicedRight: 0.8999999761581421
+        slicedBottom: 0.1000000014901161
+        slicedTop: 0.8999999761581421
+        fillCenter: true
+        topLeft: 0.5
+        topRight: 0.5
+        bottomLeft: 0.5
+        bottomRight: 0.5
+        lineWidth: 1
+        lineColor: {r: 1, g: 1, b: 1, a: 1}
+        outer: false
+        sizeInited: true
+        freeInited: false
+    layer: 1
+  - __class: Entity
+    name: Point Light
+    guid: {a: 11622110152598023106, b: 8574770705488211099}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 58}
+      - __class: PointLight
+        name: ""
+        guid: {a: 10972237642979710500, b: 12526945710527164047}
+        enabled: true
+        color: {x: 1, y: 1, z: 1}
+        intensiy: 1
+        shadowEnable: false
+        shadowEnableNew: false
+        shadowResolution: {x: 256, y: 256}
+        shadowBias: 0
+        shadowStrength: 1
+        useSoftShadow: false
+        shadowSoftness: 1
+        blurRadius: 1.299999952316284
+        blurNum: 0
+        selfShadowGradient: 0
+        shadowColor: {x: 0, y: 0, z: 0}
+        InitStrength: 0.300000011920929
+        EsmC: 0.03500000014901161
+        lightingLayers: {__class: DynamicBitset, numBits: 64, values: [1, 0]}
+        renderMode:
+          __class: LightRenderMode
+          value: AUTO
+        shadowArea: 100
+        autoShadowFrustum: true
+        shadowFrustumZNear: 1
+        shadowFrustumZFar: 100
+        range: 10
+        attenuationRange: 100
+        lightUnit:
+          __class: LightUnit
+          value: Candelas
+    layer: 0
+  - __class: Entity
+    name: Circle
+    guid: {a: 11405326739136933587, b: 16979773035420733625}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 57}
+      - __class: MeshRenderer
+        name: mesh2_renderer
+        guid: {a: 16377706634691360732, b: 16932795843130050726}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
+        sortingOrder: 7
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Circle.mesh}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: FFD_2
+    guid: {a: 5638824657282968896, b: 3652128635108756610}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 56}
+    layer: 0
+  - __class: Entity
+    name: Point Light (1)
+    guid: {a: 1246025115509895206, b: 13598523854329769119}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 59}
+      - __class: PointLight
+        name: ""
+        guid: {a: 6866742051733740928, b: 10406315817084619189}
+        enabled: true
+        color: {x: 1, y: 1, z: 1}
+        intensiy: 1
+        shadowEnable: false
+        shadowEnableNew: false
+        shadowResolution: {x: 256, y: 256}
+        shadowBias: 0
+        shadowStrength: 1
+        useSoftShadow: false
+        shadowSoftness: 1
+        blurRadius: 1.299999952316284
+        blurNum: 0
+        selfShadowGradient: 0
+        shadowColor: {x: 0, y: 0, z: 0}
+        InitStrength: 0.300000011920929
+        EsmC: 0.03500000014901161
+        lightingLayers: {__class: DynamicBitset, numBits: 64, values: [1, 0]}
+        renderMode:
+          __class: LightRenderMode
+          value: AUTO
+        shadowArea: 100
+        autoShadowFrustum: true
+        shadowFrustumZNear: 1
+        shadowFrustumZFar: 100
+        range: 10
+        attenuationRange: 100
+        lightUnit:
+          __class: LightUnit
+          value: Candelas
+    layer: 0
+  - __class: Entity
+    name: CINEMA_4D_Editor
+    guid: {a: 12488272670605704616, b: 16933043280688158385}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 51}
+    layer: 0
+  - __class: Entity
+    name: FFD
+    guid: {a: 1534543316941167499, b: 14501820939693437824}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 54}
+    layer: 0
+  - __class: Entity
+    name: SkeletonAndRenderRoot
+    guid: {a: 15442774904720699302, b: 10417846269535064449}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 50}
+      - __class: Animator
+        name: ""
+        guid: {a: 8307193803477616473, b: 14577305644557751953}
+        enabled: true
+        animations:
+          - {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Animaz-1_CINEMA_4D_Main.animaz}
+        runningWrapModes:
+          __class: Map
+          Animaz-1_CINEMA_4D_Main: 0
+        cullingMode:
+          __class: AnimatorCullingMode
+          value: CULL_UPDATE_PROPERTY
+        layers:
+          - {localId: 60}
+    layer: 0
+  - __class: Entity
+    name: Cat_ear
+    guid: {a: 14865530406094958704, b: 8846700764551600784}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 52}
+    layer: 0
+  - __class: Entity
+    name: Cat Ears 2
+    guid: {a: 8595824114762628062, b: 17007094358312334731}
+    scene: {localId: 1}
+    selfvisible: false
+    components:
+      - {localId: 49}
+    layer: 0
+  - __class: Entity
+    name: Eyebrow_L
+    guid: {a: 15727210930343609530, b: 12621583605539838114}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 53}
+      - __class: MeshRenderer
+        name: mesh0_renderer
+        guid: {a: 14720528731989774813, b: 9274319033437464726}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
+        sortingOrder: 5
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Eyebrow_L.mesh}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Eyebrow_R
+    guid: {a: 1028222739815945929, b: 11993452306953313704}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 55}
+      - __class: MeshRenderer
+        name: mesh1_renderer
+        guid: {a: 13926385439722233545, b: 1870987476538638761}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
+        sortingOrder: 6
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Eyebrow_R.mesh}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Head
+    guid: {a: 7516498568014344041, b: 380380820548575664}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 48}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3838419807127614709, b: 1762785884109701005}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 00000000-0000-0000-0000-000000000071--00000000-0000-0000-0000-000000000071.material}
+        sortingOrder: 4
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000005}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Point Light (1)
+    guid: {a: 11766070281911655429, b: 11072439629901826198}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 73}
+      - __class: PointLight
+        name: ""
+        guid: {a: 14142780917910038004, b: 1981375011480302471}
+        enabled: true
+        color: {x: 1, y: 1, z: 1}
+        intensiy: 1
+        shadowEnable: false
+        shadowEnableNew: false
+        shadowResolution: {x: 256, y: 256}
+        shadowBias: 0
+        shadowStrength: 1
+        useSoftShadow: false
+        shadowSoftness: 1
+        blurRadius: 1.299999952316284
+        blurNum: 0
+        selfShadowGradient: 0
+        shadowColor: {x: 0, y: 0, z: 0}
+        InitStrength: 0.300000011920929
+        EsmC: 0.03500000014901161
+        lightingLayers: {__class: DynamicBitset, numBits: 64, values: [1, 0]}
+        renderMode:
+          __class: LightRenderMode
+          value: AUTO
+        shadowArea: 100
+        autoShadowFrustum: true
+        shadowFrustumZNear: 1
+        shadowFrustumZFar: 100
+        range: 10
+        attenuationRange: 100
+        lightUnit:
+          __class: LightUnit
+          value: Candelas
+    layer: 0
+  - __class: Entity
+    name: FFD_2
+    guid: {a: 7584951299252599672, b: 1529640445080210578}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 70}
+    layer: 0
+  - __class: Entity
+    name: Eyebrow_R
+    guid: {a: 8811088770010953626, b: 5200258564574762395}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 69}
+      - __class: MeshRenderer
+        name: mesh1_renderer
+        guid: {a: 8954567424319576609, b: 18225770862533733538}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
+        sortingOrder: 10
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Eyebrow_R.mesh}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: Point Light
+    guid: {a: 10326473053655824010, b: 10078213541962818749}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 72}
+      - __class: PointLight
+        name: ""
+        guid: {a: 7656139104246296241, b: 8478475992351203738}
+        enabled: true
+        color: {x: 1, y: 1, z: 1}
+        intensiy: 1
+        shadowEnable: false
+        shadowEnableNew: false
+        shadowResolution: {x: 256, y: 256}
+        shadowBias: 0
+        shadowStrength: 1
+        useSoftShadow: false
+        shadowSoftness: 1
+        blurRadius: 1.299999952316284
+        blurNum: 0
+        selfShadowGradient: 0
+        shadowColor: {x: 0, y: 0, z: 0}
+        InitStrength: 0.300000011920929
+        EsmC: 0.03500000014901161
+        lightingLayers: {__class: DynamicBitset, numBits: 64, values: [1, 0]}
+        renderMode:
+          __class: LightRenderMode
+          value: AUTO
+        shadowArea: 100
+        autoShadowFrustum: true
+        shadowFrustumZNear: 1
+        shadowFrustumZFar: 100
+        range: 10
+        attenuationRange: 100
+        lightUnit:
+          __class: LightUnit
+          value: Candelas
+    layer: 0
+  - __class: Entity
+    name: Cat_ear
+    guid: {a: 17026990882749647650, b: 14647751503299676848}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 66}
+    layer: 0
+  - __class: Entity
+    name: Circle
+    guid: {a: 14358834593769536247, b: 12699979300424584585}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 71}
+      - __class: MeshRenderer
+        name: mesh2_renderer
+        guid: {a: 18396778968040739311, b: 13002116674279901363}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
+        sortingOrder: 11
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Circle.mesh}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: CINEMA_4D_Editor
+    guid: {a: 3118919942795134111, b: 9849801843814248626}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 65}
+    layer: 0
+  - __class: Entity
+    name: FFD
+    guid: {a: 2036734453494857768, b: 6730946260589848474}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 68}
+    layer: 0
+  - __class: Entity
+    name: Eyebrow_L
+    guid: {a: 10108220890862966772, b: 14894964578892550808}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 67}
+      - __class: MeshRenderer
+        name: mesh0_renderer
+        guid: {a: 7443689201726846257, b: 1596798442783019447}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 092ab42a-94ae-0fde-1d45-231362d47b7d--092ab42a-94ae-0fde-1d45-231362d47b7d.material}
+        sortingOrder: 9
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Eyebrow_L.mesh}
+        castShadow: false
+    layer: 0
+  - __class: Entity
+    name: SkeletonAndRenderRoot
+    guid: {a: 12700493146153409926, b: 6657936801010220453}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 64}
+      - __class: Animator
+        name: ""
+        guid: {a: 595288000234017428, b: 16676426133426062720}
+        enabled: true
+        animations:
+          - {localId: 1, path: b4da66e5-8e74-a66f-35a2-7b72bc37d9fd--Animaz-1_CINEMA_4D_Main.animaz}
+        runningWrapModes:
+          __class: Map
+          Animaz-1_CINEMA_4D_Main: 0
+        cullingMode:
+          __class: AnimatorCullingMode
+          value: CULL_UPDATE_PROPERTY
+        layers:
+          - {localId: 74}
+    layer: 0
+  - __class: Entity
+    name: Cat Ears 3
+    guid: {a: 5714572624554869227, b: 7751825414323159216}
+    scene: {localId: 1}
+    selfvisible: false
+    components:
+      - {localId: 63}
+    layer: 0
+  - __class: Entity
+    name: Head
+    guid: {a: 14144440656919164595, b: 1353597122948277689}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 62}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 6507662401386510985, b: 12438924743684631716}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: 00000000-0000-0000-0000-000000000071--00000000-0000-0000-0000-000000000071.material}
+        sortingOrder: 8
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: 00000000-0000-0000-0000-000000000005}
+        castShadow: false
+    layer: 0
 visible: true
 config:
   __class: Map
 msaa:
   __class: MSAAMode
-  value: _4X
+  value: NONE
 jsScriptSystems:
   - js/GraphSystem.js
   - js/EditorInjectSystem.js
@@ -717,7 +1319,7 @@ name: ""
 guid: {a: 4881689736351601423, b: 11396411750503926159}
 enabled: true
 localPosition: {x: 0, y: 9.398698, z: -4.786258}
-localScale: {x: 1.9, y: 1.62, z: 1.62}
+localScale: {x: 1.825, y: 1.62, z: 1.62}
 localOrientation: {w: 0.9981349, x: -0.06104855, y: 0, z: 0}
 parent: {localId: 5}
 children:
@@ -879,6 +1481,7 @@ children:
   - {localId: 44}
   - {localId: 43}
   - {localId: 42}
+  - {localId: 46}
 mobility:
   __class: Mobility
   value: Dynamic
@@ -894,17 +1497,17 @@ depth: 0
 name: ""
 guid: {a: 5176030185158914166, b: 10238081728770057141}
 enabled: true
-localPosition: {x: -2.649096e-08, y: -7.450581e-09, z: 0}
-localScale: {x: 2, y: 2, z: 1}
+localPosition: {x: -2.554485e-08, y: 1.324548e-08, z: 0}
+localScale: {x: 1, y: 1, z: 1}
 localOrientation: {w: 1, x: 0, y: 0, z: 0}
 parent: {localId: 41}
 mobility:
   __class: Mobility
   value: Dynamic
-position: {x: -1.695421e-05, y: -4.768372e-06}
+position: {x: -1.63487e-05, y: 8.477105e-06}
 rotation: 0
-scale: {x: 2, y: 2}
-size: {x: 360, y: 640}
+scale: {x: 1, y: 1}
+size: {x: 720, y: 1280}
 pivot: {x: 0.5, y: 0.5}
 flipX: false
 flipY: false
@@ -932,14 +1535,14 @@ depth: -2
 name: ""
 guid: {a: 16593807989846610038, b: 11925315098714278286}
 enabled: true
-localPosition: {x: 1.238538e-08, y: -0.6287272, z: 0}
+localPosition: {x: 1.238538e-08, y: -0.21875, z: 0}
 localScale: {x: 0.85, y: 0.85, z: 1}
 localOrientation: {w: 1, x: 0, y: 0, z: 0}
 parent: {localId: 41}
 mobility:
   __class: Mobility
   value: Dynamic
-position: {x: 7.926645e-06, y: -402.3854}
+position: {x: 7.926645e-06, y: -140}
 rotation: 0
 scale: {x: 0.85, y: 0.85}
 size: {x: 768, y: 240}
@@ -947,3 +1550,378 @@ pivot: {x: 0.5, y: 0.5}
 flipX: false
 flipY: false
 depth: -1
+--- !Transform &45
+name: ""
+guid: {a: 8450333873358462100, b: 5784307538257295757}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !IFTransform2d &46
+name: ""
+guid: {a: 8954632994121930832, b: 4198798792326312331}
+enabled: true
+localPosition: {x: -0.49967, y: -0.93717, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 41}
+mobility:
+  __class: Mobility
+  value: Dynamic
+position: {x: -319.7888, y: -599.7888}
+rotation: 0
+scale: {x: 1, y: 1}
+size: {x: 80.4224, y: 80.4224}
+pivot: {x: 0.5, y: 0.5}
+flipX: false
+flipY: false
+depth: -4
+--- !Transform &47
+name: ""
+guid: {a: 17024153335920802553, b: 5886893814640041376}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+children:
+  - {localId: 48}
+  - {localId: 49}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &48
+name: ""
+guid: {a: 7947983994463348834, b: 16556655481766390449}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 47}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &49
+name: ""
+guid: {a: 2252328567169036298, b: 2536474919428273594}
+enabled: true
+localPosition: {x: 0, y: 9.398698, z: -4.786258}
+localScale: {x: 1.825, y: 1.62, z: 1.62}
+localOrientation: {w: 0.9981349, x: -0.06104857, y: 0, z: 0}
+parent: {localId: 47}
+children:
+  - {localId: 50}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &50
+name: SkeletonAndRenderRoot
+guid: {a: 8597079400593819261, b: 6443934766009599164}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 4.784616, y: 4.784616, z: 4.784616}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 49}
+children:
+  - {localId: 51}
+  - {localId: 52}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &51
+name: CINEMA_4D_Editor
+guid: {a: 18105840290162377518, b: 2096835882638010291}
+enabled: true
+localPosition: {x: 0.344449, y: -0.2814434, z: 6.545774}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 0.7324411, x: -0.01038959, y: -0.6806593, z: 0.01117999}
+parent: {localId: 50}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &52
+name: Cat_ear
+guid: {a: 522806120125471021, b: 16989568568273234307}
+enabled: true
+localPosition: {x: 0.0002605073, y: -2.72998, z: 0.009882774}
+localScale: {x: 9, y: 9, z: 9}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 50}
+children:
+  - {localId: 53}
+  - {localId: 55}
+  - {localId: 57}
+  - {localId: 58}
+  - {localId: 59}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &53
+name: Eyebrow_L
+guid: {a: 14070976416582316825, b: 3042719329297456776}
+enabled: true
+localPosition: {x: -0.07419313, y: 0.3284688, z: 0.004941387}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 52}
+children:
+  - {localId: 54}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &54
+name: FFD
+guid: {a: 18320997985659691043, b: 3157878431006206109}
+enabled: true
+localPosition: {x: -0.02063717, y: 0.02419906, z: -0.001290294}
+localScale: {x: 0.1111111, y: 0.1111111, z: 0.1111111}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 53}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &55
+name: Eyebrow_R
+guid: {a: 4057682559603168618, b: 6168567862453921674}
+enabled: true
+localPosition: {x: 0.07445364, y: 0.3279477, z: 0.004941387}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 52}
+children:
+  - {localId: 56}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &56
+name: FFD_2
+guid: {a: 6648131305923217453, b: 11287011008068172938}
+enabled: true
+localPosition: {x: 0.01769281, y: 0.02473039, z: -0.001279655}
+localScale: {x: 0.1111111, y: 0.1111111, z: 0.1111111}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 55}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &57
+name: Circle
+guid: {a: 8164697561651091819, b: 1500829623370636989}
+enabled: true
+localPosition: {x: -0.0002605073, y: -0.6564165, z: -0.009882774}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 52}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &58
+name: ""
+guid: {a: 10542702434717052900, b: 14470091943671179162}
+enabled: true
+localPosition: {x: 0.2682844, y: 0.1267537, z: 0.07926039}
+localScale: {x: 0.01680124, y: 0.01680123, z: 0.01680123}
+localOrientation: {w: 0.9772871, x: -0.2119199, y: 0, z: 0}
+parent: {localId: 52}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &59
+name: ""
+guid: {a: 3405839130112915800, b: 1464743784453637803}
+enabled: true
+localPosition: {x: -0.2529626, y: 0.1267537, z: 0.07926039}
+localScale: {x: 0.01680124, y: 0.01680123, z: 0.01680123}
+localOrientation: {w: 0.9772871, x: -0.2119199, y: 0, z: 0}
+parent: {localId: 52}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !AnimLayer &60
+name: _defaultLayer
+guid: {a: 7226358357779892648, b: 16528303331562473127}
+layerType:
+  __class: LayerType
+  value: LERP
+blendWeight: 1
+autoPlay: true
+--- !Transform &61
+name: ""
+guid: {a: 15222698614442996067, b: 2585270491804248453}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+children:
+  - {localId: 62}
+  - {localId: 63}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &62
+name: ""
+guid: {a: 17024229437500297907, b: 10266877793917640841}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 61}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &63
+name: ""
+guid: {a: 18107097322725508954, b: 13178460124756142739}
+enabled: true
+localPosition: {x: 0, y: 9.398698, z: -4.786258}
+localScale: {x: 1.825, y: 1.62, z: 1.62}
+localOrientation: {w: 0.9981349, x: -0.06104857, y: 0, z: 0}
+parent: {localId: 61}
+children:
+  - {localId: 64}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &64
+name: SkeletonAndRenderRoot
+guid: {a: 12919777650644685075, b: 8838064419894020756}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 4.784616, y: 4.784616, z: 4.784616}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 63}
+children:
+  - {localId: 65}
+  - {localId: 66}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &65
+name: CINEMA_4D_Editor
+guid: {a: 8450202302491972731, b: 13445584354847797381}
+enabled: true
+localPosition: {x: 0.344449, y: -0.2814434, z: 6.545774}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 0.7324411, x: -0.01038959, y: -0.6806593, z: 0.01117999}
+parent: {localId: 64}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &66
+name: Cat_ear
+guid: {a: 18251781649232337635, b: 13998787074989169840}
+enabled: true
+localPosition: {x: 0.0002605073, y: -2.72998, z: 0.009882774}
+localScale: {x: 9, y: 9, z: 9}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 64}
+children:
+  - {localId: 67}
+  - {localId: 69}
+  - {localId: 71}
+  - {localId: 72}
+  - {localId: 73}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &67
+name: Eyebrow_L
+guid: {a: 16376266813053866730, b: 3270202043482493833}
+enabled: true
+localPosition: {x: -0.07419313, y: 0.3284688, z: 0.004941387}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 66}
+children:
+  - {localId: 68}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &68
+name: FFD
+guid: {a: 17744403846408398192, b: 12017490623538306460}
+enabled: true
+localPosition: {x: -0.02063717, y: 0.02419906, z: -0.001290294}
+localScale: {x: 0.1111111, y: 0.1111111, z: 0.1111111}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 67}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &69
+name: Eyebrow_R
+guid: {a: 9963940950076334227, b: 13543492789360457370}
+enabled: true
+localPosition: {x: 0.07445364, y: 0.3279477, z: 0.004941387}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 66}
+children:
+  - {localId: 70}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &70
+name: FFD_2
+guid: {a: 3045172826104160463, b: 16443625827317835156}
+enabled: true
+localPosition: {x: 0.01769281, y: 0.02473039, z: -0.001279655}
+localScale: {x: 0.1111111, y: 0.1111111, z: 0.1111111}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 69}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &71
+name: Circle
+guid: {a: 10971845923420868549, b: 12401302141845255296}
+enabled: true
+localPosition: {x: -0.0002605073, y: -0.6564165, z: -0.009882774}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 66}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &72
+name: ""
+guid: {a: 1751685793932554798, b: 6727081099579504313}
+enabled: true
+localPosition: {x: 0.2682844, y: 0.1267537, z: 0.07926039}
+localScale: {x: 0.01680124, y: 0.01680123, z: 0.01680123}
+localOrientation: {w: 0.9772871, x: -0.2119199, y: 0, z: 0}
+parent: {localId: 66}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &73
+name: ""
+guid: {a: 16951964207499631586, b: 10823614833175899324}
+enabled: true
+localPosition: {x: -0.2529626, y: 0.1267537, z: 0.07926039}
+localScale: {x: 0.01680124, y: 0.01680123, z: 0.01680123}
+localOrientation: {w: 0.9772871, x: -0.2119199, y: 0, z: 0}
+parent: {localId: 66}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !AnimLayer &74
+name: _defaultLayer
+guid: {a: 15657992098341904460, b: 9021536207878674578}
+layerType:
+  __class: LayerType
+  value: LERP
+blendWeight: 1
+autoPlay: true
+--- !Transform &75
+name: ""
+guid: {a: 9603106868828273799, b: 4740738810531459988}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+mobility:
+  __class: Mobility
+  value: Dynamic
