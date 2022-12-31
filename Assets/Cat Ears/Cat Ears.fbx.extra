@@ -1,0 +1,27 @@
+[
+  {
+    "guid": {
+      "a": "b4da66e5-8e74-a66f-35a2-7b72bc37d9fd",
+      "b": ""
+    },
+    "extraType": "ResItemFbxAsset",
+    "name": "Cat Ears",
+    "objGuid": "Guid(4921809642176702827, 17820627135679000992)",
+    "rttiType": "Model",
+    "version": "0.1.0",
+    "isVisibleInInspector": true,
+    "hideInPanel": false,
+    "importAnimation": true,
+    "importVertexColor": false,
+    "importBlendshape": true,
+    "materialsGUIDs": [],
+    "meshGUIDs": [
+      "29219dba-2010-7a47-c1f5-d2bc72052625",
+      "355614c4-6d1f-7da0-e978-63fd53826654",
+      "239dd2e9-51bf-ef52-76c5-9720018b865b"
+    ],
+    "animazGUIDs": [
+      "acc254c1-1b1a-38b8-356a-83f637aa553a"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "guid": {
+      "a": "62262cb4-ef5d-9c3b-4a37-bee9dbfd26a5",
+      "b": ""
+    },
+    "extraType": "ResItemMaterialOmtl",
+    "name": "Gold",
+    "objGuid": "Guid(7729584379275374440, 4684189795351922345)",
+    "rttiType": "Material",
+    "version": "0.1.0",
+    "isVisibleInInspector": true,
+    "hideInPanel": false,
+    "skinObjGuid": "Guid(14575612764516781274, 13063366639606847913)"
+  }
+]

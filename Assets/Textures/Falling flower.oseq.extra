@@ -1,0 +1,18 @@
+[
+  {
+    "guid": {
+      "a": "c88373ca-ee58-fee4-af96-b415d5742766",
+      "b": ""
+    },
+    "extraType": "ResItemTextureSequence",
+    "name": "Falling flower",
+    "objGuid": "Guid(12773184724535871104, 536394801910409388)",
+    "rttiType": "AnimSeq",
+    "version": "0.1.0",
+    "isVisibleInInspector": true,
+    "hideInPanel": false,
+    "compressionType": 1,
+    "quality": 1,
+    "maxResolution": 512
+  }
+]

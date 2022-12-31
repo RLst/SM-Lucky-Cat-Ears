@@ -1,0 +1,13 @@
+[
+  {
+    "guid": {
+      "a": "0ee0e9f9-fca4-da49-d7b4-a1ce06ab85ae",
+      "b": ""
+    },
+    "extraType": "ResItemFolder",
+    "name": "Cat Ears",
+    "version": "0.1.0",
+    "isVisibleInInspector": true,
+    "hideInPanel": false
+  }
+]
